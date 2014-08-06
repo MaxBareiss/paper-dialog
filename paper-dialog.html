@@ -70,15 +70,15 @@ Fired when the dialog's `opened` property changes.
 
     <div id="container" layout vertical>
 
+      <div id="main" flex auto>
+        <h1>{{heading}}</h1>
+        <content select=":not([dismissive]):not([affirmative])"></content>
+      </div>
+
       <div id="actions" layout horizontal>
         <content select="[dismissive]"></content>
         <div flex auto></div>
         <content select="[affirmative]"></content>
-      </div>
-
-      <div id="main" flex auto>
-        <h1>{{heading}}</h1>
-        <content></content>
       </div>
 
     </div>
